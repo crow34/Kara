@@ -9,7 +9,6 @@ models = {
 }
 
 # Set up the selected model
-@st.cache(allow_output_mutation=True)
 def setup_model(model_name):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(model_name)
